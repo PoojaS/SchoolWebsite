@@ -6,15 +6,15 @@ import web.model.Student;
 import web.repository.StudentRepository;
 
 @Service
-public class StudentSeviceImpl implements StudentService{
+public class StudentServiceImpl implements StudentService{
 
     StudentRepository studentRepository;
 
-    public StudentSeviceImpl() {
+    public StudentServiceImpl() {
     }
 
     @Autowired
-    public StudentSeviceImpl(StudentRepository studentRepository) {
+    public StudentServiceImpl(StudentRepository studentRepository) {
         this.studentRepository = studentRepository;
     }
 

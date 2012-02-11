@@ -6,7 +6,8 @@ import org.springframework.stereotype.Component;
 public class Student {
 
     private int rollNo;
-    private String name;
+    private String firstName;
+    private String lastName;
     private int standard;
     private String section;
 
@@ -18,12 +19,20 @@ public class Student {
         this.rollNo = rollNo;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public int getStandard() {

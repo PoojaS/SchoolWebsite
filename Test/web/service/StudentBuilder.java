@@ -6,7 +6,8 @@ public class StudentBuilder extends Student{
 
     public StudentBuilder withDefaults() {
         withRollNo(1);
-        withName("Default Name");
+        withFirstName("Default Firstname");
+        withLastName("Default Lastname");
         withStandard(8);
         withSection("A");
         return this;
@@ -17,8 +18,13 @@ public class StudentBuilder extends Student{
         return this;
     }
 
-    public StudentBuilder withName(String name) {
-        setName(name);
+    public StudentBuilder withFirstName(String firstName) {
+        setFirstName(firstName);
+        return this;
+    }
+
+    public StudentBuilder withLastName(String lastName) {
+        setLastName(lastName);
         return this;
     }
 

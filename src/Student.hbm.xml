@@ -7,10 +7,11 @@
     <class name="web.model.Student" table="STUDENT">
          <id name="rollNo" type="java.lang.Integer" column="ROLLNO">
              <generator class="sequence">
-                 <param name="sequence">MIT_SEQ</param>
+                 <param name="sequence">ROLL_NO</param>
              </generator>
          </id>
-         <property name="name" column="NAME" type="java.lang.String" not-null="true" length="20"/>
+         <property name="firstName" column="FIRST_NAME" type="java.lang.String" not-null="true" length="20"/>
+         <property name="lastName" column="SECOND_NAME" type="java.lang.String" not-null="true" length="20"/>
          <property name="standard" column="CLASS" type="java.lang.Integer" not-null="true"/>
          <property name="section" column="SECTION" type="java.lang.String" />
     </class>

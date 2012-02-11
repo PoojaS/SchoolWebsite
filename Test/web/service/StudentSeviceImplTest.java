@@ -1,7 +1,6 @@
 package web.service;
 
 
-import org.hamcrest.core.Is;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -26,8 +25,8 @@ public class StudentSeviceImplTest {
     @Before
     public void setUp() throws Exception {
         initMocks(this);
-        studentService = new StudentSeviceImpl(studentRepository);
-        student = new StudentBuilder().withDefaults().withName("Pooja");
+        studentService = new StudentServiceImpl(studentRepository);
+        student = new StudentBuilder().withDefaults().withFirstName("Pooja");
     }
 
     @Test

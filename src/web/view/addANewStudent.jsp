@@ -10,12 +10,12 @@
 
     <table border="1" cellpadding="2" cellspacing="2">
         <tr>
-            <td>Student Roll</td>
-            <td><form:input path="rollNo"/></td>
+            <td>First Name</td>
+            <td><form:input path="firstName"/></td>
         </tr>
         <tr>
-            <td>Student Name</td>
-            <td><form:input path="name"/></td>
+            <td>Last Name</td>
+            <td><form:input path="lastName"/></td>
         </tr>
         <tr>
             <td>Class</td>
