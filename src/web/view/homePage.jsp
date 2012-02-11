@@ -8,6 +8,6 @@
         <h1 align="center">Welcome to Spring Public School</h1>
         <br/>
         <br/>
-        <a href="/addNewStudent.school">Click to add a New Student</a>
+        <a href="addNewStudent.school">Click to add a New Student</a>
     </body>
 </html>

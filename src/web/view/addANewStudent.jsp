@@ -1,4 +1,4 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page isELIgnored="false" %>
 
 <html>
@@ -6,29 +6,29 @@
     <title>Spring Public School</title>
 </head>
 <body>
-<form action="addNewStudent.school" method="POST">
+<form:form method="POST" commandName="student">
 
     <table border="1" cellpadding="2" cellspacing="2">
         <tr>
             <td>Student Roll</td>
-            <td>${student.rollNo}</td>
+            <td><form:input path="rollNo"/></td>
         </tr>
         <tr>
             <td>Student Name</td>
-            <td>${student.name}</td>
+            <td><form:input path="name"/></td>
         </tr>
         <tr>
             <td>Class</td>
-            <td>${student.standard}</td>
+            <td><form:input path="standard"/></td>
         </tr>
         <tr>
             <td>Section</td>
-            <td>${student.section}</td>
+            <td><form:input path="section"/></td>
         </tr>
     </table>
     <br/>
-    <input type="submit" value="ADD" align="middle"/>
-</form>
+    <input type="submit" value="ADD"/>
+</form:form>
 
 </body>
 

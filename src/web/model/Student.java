@@ -2,7 +2,7 @@ package web.model;
 
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class Student {
 
     private int rollNo;
