@@ -1,0 +1,2 @@
+Trying to build my own website using spring and hibernate.This app is basically a school website which will add new students to the DB which will be possible individually or through bulk upload of details through excel sheet.Also it will display the details of existing students using Ext-Js.
+
