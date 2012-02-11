@@ -4,6 +4,12 @@
     <property name="controller_class.dir"
               value="/home/twu/Desktop/MyProjects/SchoolWebsite/out/production/SchoolWebsite/web/controller"/>
 
+    <property name="repository_class.dir"
+              value="/home/twu/Desktop/MyProjects/SchoolWebsite/out/production/SchoolWebsite/web/repository"/>
+
+    <property name="service_class.dir"
+              value="/home/twu/Desktop/MyProjects/SchoolWebsite/out/production/SchoolWebsite/web/service"/>
+
     <property name="model_class.dir"
               value="/home/twu/Desktop/MyProjects/SchoolWebsite/out/production/SchoolWebsite/web/model"/>
 
@@ -13,6 +19,12 @@
 
     <property name="webapp_controller_class.dir"
               value="/home/twu/Desktop/important_files/apache-tomcat-5.5.34/webapps/SchoolWebsite/WEB-INF/classes/web/controller"/>
+
+    <property name="webapp_repository_class.dir"
+              value="/home/twu/Desktop/important_files/apache-tomcat-5.5.34/webapps/SchoolWebsite/WEB-INF/classes/web/repository"/>
+
+    <property name="webapp_service_class.dir"
+              value="/home/twu/Desktop/important_files/apache-tomcat-5.5.34/webapps/SchoolWebsite/WEB-INF/classes/web/service"/>
 
     <property name="webapp_model_class.dir"
               value="/home/twu/Desktop/important_files/apache-tomcat-5.5.34/webapps/SchoolWebsite/WEB-INF/classes/web/model"/>
@@ -30,6 +42,20 @@
         </copy>
     </target>
 
+    <!--Deploys the web.controller class files to the container-->
+    <target name="deploy_repository_classes" description="deploys the web.controller class files">
+        <copy todir="${webapp_repository_class.dir}">
+            <fileset dir="${repository_class.dir}"/>
+        </copy>
+    </target>
+
+    <!--Deploys the web.controller class files to the container-->
+    <target name="deploy_service_classes" description="deploys the web.controller class files">
+        <copy todir="${webapp_service_class.dir}">
+            <fileset dir="${service_class.dir}"/>
+        </copy>
+    </target>
+
     <!-- Deploys the web.model class files to the container-->
     <target name="deploy_model_classes" description="deploys the web.model class files">
         <copy todir="${webapp_model_class.dir}">
@@ -38,7 +64,7 @@
     </target>
 
     <!-- Deploys the web.view files to the container -->
-    <target name="deploy" depends="deploy_controller_classes,deploy_model_classes"
+    <target name="deploy" depends="deploy_controller_classes,deploy_model_classes,deploy_repository_classes,deploy_service_classes"
             description="Copies files to the webapp dir">
         <copy todir="${webapp_jsp.dir}">
             <fileset dir="${web.view.dir}"/>
