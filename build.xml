@@ -7,6 +7,9 @@
     <property name="repository_class.dir"
               value="/home/twu/Desktop/MyProjects/SchoolWebsite/out/production/SchoolWebsite/web/repository"/>
 
+    <property name="validator_class.dir"
+              value="/home/twu/Desktop/MyProjects/SchoolWebsite/out/production/SchoolWebsite/web/validators"/>
+
     <property name="service_class.dir"
               value="/home/twu/Desktop/MyProjects/SchoolWebsite/out/production/SchoolWebsite/web/service"/>
 
@@ -22,6 +25,9 @@
 
     <property name="webapp_repository_class.dir"
               value="/home/twu/Desktop/important_files/apache-tomcat-5.5.34/webapps/SchoolWebsite/WEB-INF/classes/web/repository"/>
+
+    <property name="webapp_validator_class.dir"
+              value="/home/twu/Desktop/important_files/apache-tomcat-5.5.34/webapps/SchoolWebsite/WEB-INF/classes/web/validators"/>
 
     <property name="webapp_service_class.dir"
               value="/home/twu/Desktop/important_files/apache-tomcat-5.5.34/webapps/SchoolWebsite/WEB-INF/classes/web/service"/>
@@ -49,6 +55,12 @@
         </copy>
     </target>
 
+    <target name="deploy_validator_classes" description="deploys the web.controller class files">
+        <copy todir="${webapp_validator_class.dir}">
+            <fileset dir="${validator_class.dir}"/>
+        </copy>
+    </target>
+
     <!--Deploys the web.controller class files to the container-->
     <target name="deploy_service_classes" description="deploys the web.controller class files">
         <copy todir="${webapp_service_class.dir}">
@@ -64,7 +76,7 @@
     </target>
 
     <!-- Deploys the web.view files to the container -->
-    <target name="deploy" depends="deploy_controller_classes,deploy_model_classes,deploy_repository_classes,deploy_service_classes"
+    <target name="deploy" depends="deploy_controller_classes,deploy_model_classes,deploy_repository_classes,deploy_service_classes,deploy_validator_classes"
             description="Copies files to the webapp dir">
         <copy todir="${webapp_jsp.dir}">
             <fileset dir="${web.view.dir}"/>

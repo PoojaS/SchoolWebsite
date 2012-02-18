@@ -4,22 +4,47 @@
 <html>
 <head>
     <title>Spring Public School</title>
+    <style>
+        .error {
+            color: red;
+            font-style: italic;
+        }
+        .rfq{
+            color: #8b0000;
+            font-style: oblique;
+        }
+    </style>
 </head>
 <body>
 <form:form method="POST" commandName="student">
 
     <table border="1" cellpadding="2" cellspacing="2">
         <tr>
-            <td>First Name</td>
-            <td><form:input path="firstName"/></td>
+            <td>
+                First Name<br/>
+                (RFQ)
+            </td>
+            <td>
+            <form:input path="firstName"/>
+            <form:errors path="firstName" cssClass="error"/></td>
         </tr>
         <tr>
-            <td>Last Name</td>
-            <td><form:input path="lastName"/></td>
+            <td>Last Name<br/>
+                (RFQ)
+            </td>
+            <td>
+                <form:input path="lastName"/>
+                <form:errors path="lastName" cssClass="error"/>
+            </td>
         </tr>
         <tr>
-            <td>Class</td>
-            <td><form:input path="standard"/></td>
+            <td>Class<br/>
+                (RFQ)
+            </td>
+            <td>
+                <form:input path="standard"/>
+                <form:errors path="standard" cssClass="error"/>
+            </td>
         </tr>
         <tr>
             <td>Section</td>
