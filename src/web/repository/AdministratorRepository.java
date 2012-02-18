@@ -17,8 +17,6 @@ public class AdministratorRepository {
 
     SessionFactory sessionFactory;
 
-    HibernateTemplate hibernateTemplate;
-
     public AdministratorRepository() {
     }
 

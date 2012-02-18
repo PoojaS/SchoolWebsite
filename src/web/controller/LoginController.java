@@ -31,6 +31,6 @@ public class LoginController {
 
         if(administratorService.isValidCredentials(administrator))
           return "homePage";
-        return null;
+        return "redirect: dummyPage";
     }
 }

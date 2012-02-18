@@ -6,6 +6,7 @@
 </head>
 
 <body>
+
     <form:form action="login.school" method="POST" commandName="administrator">
     UserName <form:input path="userName"/>
     <br/>

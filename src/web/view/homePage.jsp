@@ -1,3 +1,5 @@
+<%@ page isELIgnored="false" %>
+
 <html>
     <head>
         <title>
@@ -8,6 +10,14 @@
         <h1 align="center">Welcome to Spring Public School</h1>
         <br/>
         <br/>
-        <a href="addNewStudent.school">Click to add a New Student</a>
+
+
+        Welcome ${administrator.userName}!
+
+        <br/>
+        <br/>
+
+        <a href="addNewStudent.school">Click to add a New Student</a><br/>
+        <a href="listStudents.school">Click to view list of students</a>
     </body>
 </html>
