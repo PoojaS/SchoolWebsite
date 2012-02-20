@@ -1,13 +1,22 @@
 package web.model;
 
-import org.springframework.stereotype.Component;
 
-//@Component
+import org.hibernate.validator.constraints.NotEmpty;
+
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+
 public class Student {
 
     private int rollNo;
+    @NotEmpty
     private String firstName;
+    @NotEmpty
     private String lastName;
+    @NotNull
+    @Min(value = 1)
+    @Digits(integer = 2,fraction = 0)
     private int standard;
     private String section;
 
