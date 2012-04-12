@@ -13,3 +13,32 @@ CLASS int,
 SECTION varchar(4) );
 
 The hbm required the generator type as sequence and also needed the sequence name(MY_SEQ) to be provided as a param.
+
+
+
+How to set up the app
+
+Starting hsqldb:
+1.cd into hsqldb
+2.run the following command from a terminal to start the server:
+   java -cp lib/hsqldb.jar org.hsqldb.server.Server
+3.run the following from another terminal to open the gui for the server
+   java -cp ./lib/hsqldb.jar org.hsqldb.util.DatabaseManagerSwing
+
+select HSQL Database Engine Server and connect to it.
+
+
+Starting tomcat:
+cd into apache-tomcat/bin and :
+    Starting and stopping tomcat server
+        starting:
+          sh startup.sh
+        stopping:
+          sh shutdown.sh
+
+    Starting tomcat in remote debug mode
+        starting:
+          sh catalina.sh jpda start
+        stopping
+          sh catalina.sh jpda stop
+
