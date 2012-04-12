@@ -1,3 +1,6 @@
-function clickMe(){
-    alert("I have been clicked!");
-}
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#btton").hide();
+        alert("hidden");
+    });
+});
