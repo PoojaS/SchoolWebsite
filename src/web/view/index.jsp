@@ -11,7 +11,7 @@
     <br/>
 
     <a href="loginPage.school">Click here to login</a>
-    <button id="btton">Click me</button>
+    <input type="button" id="btton" onclick="clickedMe(this)"/>
 </body>
 
 </html>

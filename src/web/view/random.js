@@ -1,6 +1,4 @@
-$(document).ready(function(){
-    $("button").click(function(){
-        $("#btton").hide();
-        alert("hidden");
-    });
-});
+function clickedMe(element){
+    element.hide();
+    alert("hidden");
+}
