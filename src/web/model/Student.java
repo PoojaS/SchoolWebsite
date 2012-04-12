@@ -19,6 +19,7 @@ public class Student {
     @Digits(integer = 2,fraction = 0)
     private int standard;
     private String section;
+    private boolean checkbox;
 
     public int getRollNo() {
         return rollNo;
@@ -58,5 +59,13 @@ public class Student {
 
     public void setSection(String section) {
         this.section = section;
+    }
+
+    public boolean isCheckbox() {
+        return checkbox;
+    }
+
+    public void setCheckbox(boolean checkbox) {
+        this.checkbox = checkbox;
     }
 }

@@ -36,7 +36,7 @@
               value="/home/twu/Desktop/important_files/apache-tomcat-5.5.34/webapps/SchoolWebsite/WEB-INF/classes/web/model"/>
 
     <property name="webapp_jsp.dir"
-              value="/home/twu/Desktop/important_files/apache-tomcat-5.5.34/webapps/SchoolWebsite/"/>
+              value="/home/twu/Desktop/important_files/apache-tomcat-5.5.34/webapps/SchoolWebsite/WEB-INF/jsps"/>
 
     <property name="web_inf.dir"
               value="/home/twu/Desktop/important_files/apache-tomcat-5.5.34/webapps/SchoolWebsite/WEB-INF"/>

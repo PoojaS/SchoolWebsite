@@ -34,7 +34,6 @@ public class AddNewStudentController {
 
     @RequestMapping(method = RequestMethod.POST)
     public String onSubmit(@Valid @ModelAttribute("student") Student student,BindingResult result) {
-//        validator.validate(student,result);
         if(result.hasErrors())
             return "addANewStudent";
         studentService.saveDetails(student);
