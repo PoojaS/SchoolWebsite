@@ -2,16 +2,13 @@ package web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.Errors;
-import org.springframework.validation.Validator;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import web.model.*;
+import web.model.Student;
 import web.service.StudentService;
-import web.validators.StudentValidator;
 
 import javax.validation.Valid;
 
@@ -33,10 +30,9 @@ public class AddNewStudentController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public String onSubmit(@Valid @ModelAttribute("student") Student student,BindingResult result) {
-        if(result.hasErrors())
-            return "addANewStudent";
+    public String onSubmit(@Valid @ModelAttribute("student") Student student, Model model) {
         studentService.saveDetails(student);
+        model.addAttribute(student);
         return "newStudent";
     }
 }
