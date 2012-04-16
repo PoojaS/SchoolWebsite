@@ -35,8 +35,8 @@ public class ListStudentsServiceImplTest {
     @Test
     public void shouldGiveAListOfStudentsAvailable(){
 
-        Student student1 = new StudentBuilder().withDefaults();
-        Student student2 = new StudentBuilder().withDefaults();
+        Student student1 = new StudentBuilder().withDefaults().build();
+        Student student2 = new StudentBuilder().withDefaults().build();
         when(repository.getStudents()).thenReturn(asList(student1, student2));
 
         List<Student> students = serviceImpl.getListOfStudents();

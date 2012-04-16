@@ -16,10 +16,22 @@ public class Student {
     private String lastName;
     @NotNull
     @Min(value = 1)
-    @Digits(integer = 2,fraction = 0)
+    @Digits(integer = 2, fraction = 0)
     private int standard;
     private String section;
     private boolean checkbox;
+
+    public Student(int rollNo, String firstName, String lastName, int standard, String section) {
+        this.rollNo = rollNo;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.standard = standard;
+        this.section = section;
+    }
+
+    public Student() {
+
+    }
 
     public int getRollNo() {
         return rollNo;

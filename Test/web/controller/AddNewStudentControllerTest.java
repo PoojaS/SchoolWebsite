@@ -18,27 +18,24 @@ import static javax.validation.Validation.buildDefaultValidatorFactory;
 import static org.mockito.Mockito.verify;
 import static org.mockito.MockitoAnnotations.initMocks;
 
-@Ignore
 public class AddNewStudentControllerTest {
     private AddNewStudentController controller;
-    private Validator validator;
     @Mock
-    private StudentService studentService;
+    StudentService service;
     @Mock
     private BindingResult result;
 
     @Before
     public void setUp() throws Exception {
         initMocks(this);
-        ValidatorFactory validatorFactory = (ValidatorFactory) buildDefaultValidatorFactory().usingContext().traversableResolver(new DefaultTraversableResolver()).getValidator();
-        validator= (Validator) validatorFactory.getValidator();
-        controller = new AddNewStudentController(studentService);
+        controller = new AddNewStudentController(service);
     }
 
     @Test
-    public void shouldValidateStudent(){
-        Student student = new StudentBuilder();
+    public void shouldSaveStudentDetails() {
+        Student student = new StudentBuilder().withDefaults().build();
         controller.onSubmit(student,result);
-        verify(validator).validate(student, result);
+
+        verify(service).saveDetails(student);
     }
 }

@@ -25,7 +25,7 @@ public class StudentValidatorTest {
     public void setUp() throws Exception {
         initMocks(this);
         studentValidator = new StudentValidator();
-        student = new StudentBuilder().withFirstName("");
+        student = new StudentBuilder().withFirstName("").build();
     }
 
     @Test

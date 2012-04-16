@@ -36,8 +36,8 @@ public class ListStudentsRepositoryTest {
 
     @Test
     public void shouldGetAListOfStudents(){
-        Student student1 = new StudentBuilder().withDefaults();
-        Student student2 = new StudentBuilder().withDefaults().withFirstName("Punya");
+        Student student1 = new StudentBuilder().withDefaults().build();
+        Student student2 = new StudentBuilder().withDefaults().withFirstName("Punya").build();
         when(sessionFactory.getCurrentSession()).thenReturn(session);
         when(session.createCriteria(Student.class)).thenReturn(criteria);
         when(criteria.list()).thenReturn(asList(student1,student2));

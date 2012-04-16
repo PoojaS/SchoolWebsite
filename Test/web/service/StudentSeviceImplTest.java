@@ -27,7 +27,7 @@ public class StudentSeviceImplTest {
     public void setUp() throws Exception {
         initMocks(this);
         studentService = new StudentServiceImpl(studentRepository);
-        student = new StudentBuilder().withDefaults().withFirstName("Pooja");
+        student = new StudentBuilder().withDefaults().withFirstName("Pooja").build();
     }
 
     @Test
